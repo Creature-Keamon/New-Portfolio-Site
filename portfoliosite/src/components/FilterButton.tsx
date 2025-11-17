@@ -1,14 +1,14 @@
 interface Props {
   children: string;
-  colour?: "primary" | "secondary" | "danger" | "success";
+
   onClick: () => void;
 }
 
-function Button({ children, onClick, colour = "primary" }: Props) {
+function FilterButton({ children, onClick }: Props) {
   return (
     <button
       type="button"
-      className={"btn btn-" + colour}
+      className={"btn btn-secondary"}
       //style="--btn-border-width: .25rm;"
       onClick={onClick}
     >
@@ -17,4 +17,4 @@ function Button({ children, onClick, colour = "primary" }: Props) {
   );
 }
 
-export default Button;
+export default FilterButton;
