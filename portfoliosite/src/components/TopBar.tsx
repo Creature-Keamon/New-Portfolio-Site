@@ -2,9 +2,9 @@ import Button from "./Button";
 
 function TopBar() {
   return (
-    <div className="Wrap">
-      <div className="TopBar"></div>
-      <div className="ReturnButtonWrapper">
+    <div className="wrap">
+      <div className="top-bar"></div>
+      <div className="return-button-wrapper">
         <Button onClick={() => console.log("Return Button Clickded")}>
           Open
         </Button>

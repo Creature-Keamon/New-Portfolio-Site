@@ -2,6 +2,7 @@ import { useState } from "react";
 import CustomHeader from "./CustomHeader";
 import TopBar from "./TopBar";
 import FilterWrapper from "./FilterWrapper";
+import ContentItem from "./ContentItem";
 
 function Page() {
   const [alertVisible, alertVisibility] = useState(false);
@@ -11,6 +12,9 @@ function Page() {
       <TopBar />
       <CustomHeader text="PROJECTS" />
       <FilterWrapper filters={arr}></FilterWrapper>
+      <div className="content-grid">
+        <ContentItem />
+      </div>
     </div>
   );
 }
