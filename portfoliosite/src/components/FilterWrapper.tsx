@@ -8,8 +8,8 @@ interface Props {
 export default function FilterWrapper({ filters }: Props) {
   const [alertVisible, alertVisibility] = useState(false);
   return (
-    <div className="filter-wrapper">
-      <h3>Filters</h3>
+    <div className="filter-wrapper text">
+      <h3 className="filter-header text header-text">FILTERS</h3>
       {filters.map((item) => (
         <FilterButton onClick={() => alertVisibility(true)}>
           {item}

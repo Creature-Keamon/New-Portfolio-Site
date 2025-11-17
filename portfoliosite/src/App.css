@@ -2,21 +2,37 @@ html * {
     font-family: 'Kumbh Sans';
 }
 
+.Bg {
+    background-color: brown;
+    height: 200vh;
+}
+
+.text {
+    color: rgba(221, 221, 221, 0.7);
+}
+
+/*header text styles*/
+
+.header-text {
+    font-weight: 700;
+}
+
 .custom-header {
     text-align: right;
     padding-right: 40px;
     padding-top: 10px;
     font-size: 100px;
     font-weight: 900;
-    color: rgba(221, 221, 221, 0.7);
-    position: sticky;
-    top: 0;
 }
+
+/*TopBar styles*/
 
 .top-bar {
     height: 80px;
     background-color: rgba(221, 221, 221, 0.1);
     filter: blur(10px);
+    position: sticky;
+    top: 0;
 }
 
 .return-button-wrapper {
@@ -26,24 +42,53 @@ html * {
     position: absolute;
 }
 
-.Bg {
-    background-color: brown;
-    height: 100vh;
+/*ContentItem styles */
+
+.content-grid {
+    padding-top: 100px;
 }
 
-.filter-wrapper {
+.content-wrapper-right {
+    padding-right: 40px;
+}
 
+.content-wrapper-left {
     padding-left: 40px;
 }
 
-.btn {
-    margin-right: 10px;
+.main-content {
+    width: 50%;
+}
+
+.main-content-right {
+    float: right;
+}
+
+.filter-wrapper {
+    position: absolute;
+    top: 17.5%;
+    padding-left: 40px;
+    width: 25%;
 }
 
 .content-image {
-    width: 40%;
+    width: 100%;
+    border-radius: 10px;
 }
 
-.content-item {
 
+
+.tag-wrapper {
+    width: 16%;
+    padding-top: 10px;
+    position: absolute;
+}
+
+.tag-wrapper {
+    margin-left: 35%;
+}
+
+.filter-button {
+    margin-bottom: 10px;
+    margin-right: 10px;
 }

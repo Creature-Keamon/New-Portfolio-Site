@@ -4,7 +4,7 @@ interface Props {
   onClick: () => void;
 }
 
-function Button({ children, onClick, colour = "primary" }: Props) {
+function Button({ children, onClick = () => {}, colour = "primary" }: Props) {
   return (
     <button
       type="button"
