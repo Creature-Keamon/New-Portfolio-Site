@@ -13,7 +13,7 @@ function ProjectsPage({ Navigate }: Props) {
         <ContentItem
           Right={false}
           Name="Linus Tech Tips"
-          Content={2069}
+          Content="2069"
           ImgName="Linus.jpg"
           Tags={testTags}
           PageURL="Project1"
@@ -22,7 +22,7 @@ function ProjectsPage({ Navigate }: Props) {
         <ContentItem
           Right={true}
           Name="Linus Tech Tips"
-          Content={2069}
+          Content="2069"
           ImgName="Linus.jpg"
           Tags={testTags}
           PageURL="/Project1.tsx"
@@ -31,7 +31,7 @@ function ProjectsPage({ Navigate }: Props) {
         <ContentItem
           Right={false}
           Name="Linus Tech Tips"
-          Content={2069}
+          Content="2069"
           ImgName="Linus.jpg"
           Tags={testTags}
           PageURL="/Project1.tsx"
@@ -40,7 +40,7 @@ function ProjectsPage({ Navigate }: Props) {
         <ContentItem
           Right={true}
           Name="Linus Tech Tips"
-          Content={2069}
+          Content="2069"
           ImgName="Linus.jpg"
           Tags={testTags}
           PageURL="/App.tsx"

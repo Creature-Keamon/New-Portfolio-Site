@@ -4,7 +4,7 @@ interface Props {
   ImgName: string;
   PageURL: string;
   Name: string;
-  Content: number;
+  Content: string;
   Tags: string[];
   Right: boolean;
   Navigate: (item: string) => void;
@@ -15,7 +15,7 @@ function ContentItem({
   PageURL = "",
   Name,
   Content,
-  Tags,
+  Tags = [],
   Right = false,
   Navigate,
 }: Props) {
