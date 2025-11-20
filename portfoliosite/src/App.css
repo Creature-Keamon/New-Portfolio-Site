@@ -67,23 +67,26 @@ body {
 
 .content-grid {
     padding-top: 100px;
+    display: grid;
+    grid-template-columns: auto;
 }
 
 .content-wrapper-right {
-    padding-right: 40px;
+    margin-right: 40px;
+    justify-self: end;
 }
 
 .content-wrapper-left {
-    padding-left: 40px;
+    margin-left: 40px;
+}
+
+.content-wrapper {
+    width: 60%;
+    height: 40%;
 }
 
 .main-content {
-    width: 50%;
     margin-bottom: 5%;
-}
-
-.main-content-right {
-    float: right;
 }
 
 .content-image {
@@ -92,10 +95,15 @@ body {
 }
 
 .tag-wrapper {
-    width: 15%;
+    width: 25%;
     padding-top: 10px;
     position: absolute;
-    margin-left: 35%;
+    right: 0;
+    pointer-events: none;
+}
+
+.btn-secondary {
+    margin: 5px;
 }
 
 /*Clickable animations*/

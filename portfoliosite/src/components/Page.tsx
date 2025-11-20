@@ -10,9 +10,8 @@ interface Props {
 
 /*creates a page within some formatting rules and populates it with 
 it's given props*/
-function Page({ children, title, filter }: Props) {
+function Page({ children, title, filter = false }: Props) {
   const arr = ["Programming", "3D Art", "Game Design", "Video Editing"];
-  const testTags = ["Hello"];
   return (
     <div className="Bg">
       <TopBar />

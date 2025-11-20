@@ -23,22 +23,23 @@ function ContentItem({
     <div
       className={
         "content-wrapper " +
-        (PageURL.length > 0? "clickable " : "") +
+        (PageURL.length > 0 ? "clickable " : "") +
         (Right === true ? "content-wrapper-right" : "content-wrapper-left")
       }
       {...(PageURL.length > 0 ? { onClick: () => Navigate(PageURL) } : {})}
     >
       <div
         className={
-          Right === true
-            ? "main-content-right main-content"
-            : "main-content-left main-content"
+          "main-content " +
+          (Right === true ? "main-content-right" : "main-content-left")
         }
       >
         <img className="content-image " src={"src/assets/" + ImgName}></img>
         <div className="tag-wrapper">
           {Tags.map((item) => (
-            <FilterButton onClick={() => {}}>{item}</FilterButton>
+            <FilterButton onClick={() => {}} Clickable={false}>
+              {item}
+            </FilterButton>
           ))}
         </div>
         <h1 className="project-name text header-text">{Name}</h1>

@@ -1,12 +1,11 @@
 import Page from "./components/Page";
 import ContentItem from "./components/ContentItem";
-import React from "react";
 
 interface Props {
   Navigate: (item: string) => void;
 }
 
-function ProjectsPage({ Navigate }) {
+function ProjectsPage({ Navigate }: Props) {
   const testTags = ["Hello", "I", "Am", "A", "Tag", "Yes"];
   return (
     <Page title="PROJECTS" filter={true}>
@@ -17,7 +16,8 @@ function ProjectsPage({ Navigate }) {
           Content={2069}
           ImgName="Linus.jpg"
           Tags={testTags}
-          PageURL="App.tsx"
+          PageURL="Project1"
+          Navigate={Navigate}
         />
         <ContentItem
           Right={true}
@@ -25,7 +25,8 @@ function ProjectsPage({ Navigate }) {
           Content={2069}
           ImgName="Linus.jpg"
           Tags={testTags}
-          PageURL="App.tsx"
+          PageURL="/Project1.tsx"
+          Navigate={Navigate}
         />
         <ContentItem
           Right={false}
@@ -33,6 +34,17 @@ function ProjectsPage({ Navigate }) {
           Content={2069}
           ImgName="Linus.jpg"
           Tags={testTags}
+          PageURL="/Project1.tsx"
+          Navigate={Navigate}
+        />
+        <ContentItem
+          Right={true}
+          Name="Linus Tech Tips"
+          Content={2069}
+          ImgName="Linus.jpg"
+          Tags={testTags}
+          PageURL="/App.tsx"
+          Navigate={Navigate}
         />
       </div>
     </Page>
