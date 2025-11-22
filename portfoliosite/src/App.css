@@ -66,7 +66,7 @@ body {
 /*ContentItem styles */
 
 .content-grid {
-    padding-top: 100px;
+
     display: grid;
     grid-template-columns: auto;
 }
@@ -74,15 +74,21 @@ body {
 .content-wrapper-right {
     margin-right: 40px;
     justify-self: end;
+    position: relative;
 }
 
 .content-wrapper-left {
     margin-left: 40px;
+    position: relative;
 }
 
 .content-wrapper {
     width: 60%;
-    height: 40%;
+    height: 100%;
+}
+
+.flavour-wrapper {
+    margin-top: 20%;
 }
 
 .main-content {
@@ -95,7 +101,7 @@ body {
 }
 
 .tag-wrapper {
-    width: 25%;
+    width: 30%;
     padding-top: 10px;
     position: absolute;
     right: 0;
@@ -104,6 +110,24 @@ body {
 
 .btn-secondary {
     margin: 5px;
+}
+
+.project-name {
+    margin-top: 5px;
+}
+
+.flavour-item {
+    width: 20%;
+    position:absolute;
+
+}
+
+.flavour-item-left {
+    right: 5%;
+}
+
+.flavour-item-right {
+    left: 5%;
 }
 
 /*Clickable animations*/

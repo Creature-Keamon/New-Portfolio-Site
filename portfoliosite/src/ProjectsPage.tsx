@@ -25,7 +25,7 @@ function ProjectsPage({ Navigate }: Props) {
           Content="2069"
           ImgName="Linus.jpg"
           Tags={testTags}
-          PageURL="/Project1.tsx"
+          PageURL="Project1"
           Navigate={Navigate}
         />
         <ContentItem
@@ -34,7 +34,7 @@ function ProjectsPage({ Navigate }: Props) {
           Content="2069"
           ImgName="Linus.jpg"
           Tags={testTags}
-          PageURL="/Project1.tsx"
+          PageURL="Project1"
           Navigate={Navigate}
         />
         <ContentItem
@@ -43,7 +43,7 @@ function ProjectsPage({ Navigate }: Props) {
           Content="2069"
           ImgName="Linus.jpg"
           Tags={testTags}
-          PageURL="/App.tsx"
+          PageURL="Project1"
           Navigate={Navigate}
         />
       </div>
