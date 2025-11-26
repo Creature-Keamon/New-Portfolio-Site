@@ -1,11 +1,20 @@
+import Button from "./Button";
+
 interface Props {
   text: string;
   subheader: string;
   font: string;
   textColor: string;
+  buttonRedirects: string[];
 }
 
-function CustomHeader({ text, subheader = "", font, textColor }: Props) {
+function CustomHeader({
+  text,
+  subheader = "",
+  font,
+  textColor,
+  buttonRedirects,
+}: Props) {
   return (
     <div className="header-wrapper">
       <h1
@@ -20,6 +29,7 @@ function CustomHeader({ text, subheader = "", font, textColor }: Props) {
       >
         {subheader}
       </h3>
+      {buttonRedirects.length > 0 && <Button onClick={()} colour="secondary">Hello</Button>}
     </div>
   );
 }

@@ -8,7 +8,7 @@ interface Props {
 function ProjectsPage({ Navigate }: Props) {
   const testTags = ["Game Design", "3D Art", "Programming"];
   return (
-    <Page title="PROJECTS" filter={true}>
+    <Page title="PROJECTS" filter={true} backgroundColor="rgb(29,32,33)">
       <div className="content-grid">
         <ContentItem
           Right={false}

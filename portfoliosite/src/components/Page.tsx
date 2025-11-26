@@ -9,6 +9,7 @@ interface Props {
   subtitle: string;
   font: string;
   textColor: string;
+  backgroundColor: string;
 }
 
 /*creates a page within some formatting rules and populates it with 
@@ -20,10 +21,11 @@ function Page({
   subtitle = "",
   font,
   textColor,
+  backgroundColor
 }: Props) {
   const arr = ["Programming", "3D Art", "Game Design", "Video Editing"];
   return (
-    <div className="Bg">
+    <div className="Bg" style={{backgroundColor: backgroundColor}}>
       <div className="grid-item">
         {filter === true ? (
           <FilterWrapper filters={arr}></FilterWrapper>
