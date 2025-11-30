@@ -14,7 +14,7 @@ interface Props {
   buttonLinks: string[];
   buttonText: string[];
   buttonImages: string[];
-  filterItem: (filter: number) => void;
+  filterItem: (filter: string) => void;
 }
 
 /*creates a page within some formatting rules and populates it with 
@@ -32,20 +32,12 @@ function Page({
   buttonImages,
   filterItem,
 }: Props) {
-  const arr = [
-    "Programming",
-    "3D Art",
-    "Game Design",
-    "Video Editing",
-    "Web Development",
-    "All",
-  ];
   return (
     <div className="Bg" style={{ backgroundColor: backgroundColor }}>
       <div className="grid-item">
         <TopBar />
         {filter === true ? (
-          <FilterWrapper filters={arr} filterItem={filterItem}></FilterWrapper>
+          <FilterWrapper filterItem={filterItem}></FilterWrapper>
         ) : (
           <div className="filter-wrapper"></div>
         )}

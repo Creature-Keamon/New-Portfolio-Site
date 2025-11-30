@@ -9,50 +9,51 @@ interface Props {
 function ProjectsPage({ Navigate }: Props) {
   const Projects = [
     {
-      Right: false,
-      Name: "Re-Make",
-      Content: "Ongoing",
-      ImgName: "Re-Make.png",
-      Tags: ["Game Design", "3D Art", "Programming", "Video Editing"],
+      Name: "Decommission",
+      Year: "2025",
+      ImgName: "Decommission.png",
+      Tags: ["Game Design", "3D Art"],
       PageURL: "Project1",
-      Navigate: Navigate,
     },
     {
-      Right: true,
-      Name: "Linus Tech Tips",
-      Content: "2069",
-      ImgName: "Linus.jpg",
+      Name: "Ammit the Truth",
+      Year: "2024",
+      ImgName: "Ammit.png",
       Tags: ["Game Design", "3D Art", "Programming"],
       PageURL: "Project1",
-      Navigate: Navigate,
     },
     {
-      Right: false,
-      Name: "Linus Tech Tips",
-      Content: "2069",
+      Name: "My Portfolio Website",
+      Year: "2025",
       ImgName: "Linus.jpg",
-      Tags: ["Game Design", "3D Art", "Programming"],
+      Tags: ["Programming", "Web Development"],
       PageURL: "Project1",
-      Navigate: Navigate,
     },
     {
-      Right: true,
       Name: "Linus Tech Tips",
-      Content: "2069",
+      Year: "2069",
       ImgName: "Linus.jpg",
-      Tags: ["Game Design", "3D Art", "Programming"],
+      Tags: ["Game Design", "3D Art", "Video Editing"],
       PageURL: "Project1",
-      Navigate: Navigate,
+    },
+    {
+      Name: '"To Reminisce"',
+      Year: "2025",
+      ImgName: "Linus.jpg",
+      Tags: ["Filmmaking", "Video Editing"],
+      PageURL: "Project1",
     },
   ];
   const [content, setContent] = useState(Projects);
 
-  const filterItem = (filter: number) => {
-    if (filter === 5) {
+  const filterItem = (filter: string) => {
+    if (filter === "All") {
       setContent(Projects);
     } else {
       const filteredPage = Projects.filter((Project: any) => {
-        return filter in Project.Tags;
+        return Project.Tags.find((tag: string) => {
+          return tag === filter;
+        });
       });
       setContent(filteredPage);
     }
@@ -66,16 +67,16 @@ function ProjectsPage({ Navigate }: Props) {
       filterItem={filterItem}
     >
       <div className="content-grid">
-        {content.map((Project) => {
+        {content.map((Project, index) => {
           return (
             <ContentItem
-              Right={Project.Right}
+              Right={(index + 1) % 2 === 0 ? true : false}
               Name={Project.Name}
-              Content={Project.Content}
+              Content={Project.Year}
               ImgName={Project.ImgName}
               Tags={Project.Tags}
               PageURL={Project.PageURL}
-              Navigate={Project.Navigate}
+              Navigate={Navigate}
             />
           );
         })}
