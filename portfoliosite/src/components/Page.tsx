@@ -1,6 +1,7 @@
 import CustomHeader from "./CustomHeader";
 import TopBar from "./TopBar";
 import FilterWrapper from "./FilterWrapper";
+import type React from "react";
 
 interface Props {
   children: React.ReactNode;
@@ -13,6 +14,7 @@ interface Props {
   buttonLinks: string[];
   buttonText: string[];
   buttonImages: string[];
+  filterItem: (filter: number) => void;
 }
 
 /*creates a page within some formatting rules and populates it with 
@@ -28,14 +30,22 @@ function Page({
   buttonLinks,
   buttonText,
   buttonImages,
+  filterItem,
 }: Props) {
-  const arr = ["Programming", "3D Art", "Game Design", "Video Editing"];
+  const arr = [
+    "Programming",
+    "3D Art",
+    "Game Design",
+    "Video Editing",
+    "Web Development",
+    "All",
+  ];
   return (
     <div className="Bg" style={{ backgroundColor: backgroundColor }}>
       <div className="grid-item">
         <TopBar />
         {filter === true ? (
-          <FilterWrapper filters={arr}></FilterWrapper>
+          <FilterWrapper filters={arr} filterItem={filterItem}></FilterWrapper>
         ) : (
           <div className="filter-wrapper"></div>
         )}
