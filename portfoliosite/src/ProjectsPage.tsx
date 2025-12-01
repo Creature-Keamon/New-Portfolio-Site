@@ -13,7 +13,7 @@ function ProjectsPage({ Navigate }: Props) {
       Year: "2025",
       ImgName: "Decommission.png",
       Tags: ["Game Design", "3D Art"],
-      PageURL: "Project1",
+      PageURL: "Decommission",
     },
     {
       Name: "Ammit the Truth",

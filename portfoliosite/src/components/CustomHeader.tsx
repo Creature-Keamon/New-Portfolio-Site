@@ -25,18 +25,21 @@ function CustomHeader({
 
   return (
     <div className="header-wrapper">
-      <h1
-        className="custom-header text header-text"
-        style={{ fontFamily: font, color: textColor }}
-      >
-        {text}
-      </h1>
-      <h3
-        className="sub-header text header-text"
-        style={{ fontFamily: font, color: textColor }}
-      >
-        {subheader}
-      </h3>
+      <div className="header-grid">
+        <h3
+          className="sub-header text header-text"
+          style={{ fontFamily: font, color: textColor }}
+        >
+          {subheader}
+        </h3>
+        <h1
+          className="custom-header text header-text"
+          style={{ fontFamily: font, color: textColor }}
+        >
+          {text}
+        </h1>
+      </div>
+
       {buttonLinks?.length > 0 && (
         <div className="external-buttons">
           {buttonLinks.map((link: string, i: number) => (

@@ -1,4 +1,4 @@
-import Project1 from "./Project1";
+import Project1 from "./Decommission";
 import "./App.css";
 import { useState } from "react";
 import ProjectsPage from "./ProjectsPage";
@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       {page === "Projects" && <ProjectsPage Navigate={navigate} />}
-      {page === "Project1" && <Project1 />}
+      {page === "Decommission" && <Project1 />}
     </div>
   );
 }
