@@ -8,7 +8,8 @@ function RotatingDisk({ Navigate }: Props) {
   const { scrollY } = useScroll();
 
   return (
-    <div className="disk-wrapper">
+    <div className="nav-wrapper">
+      <motion.div className="disk-wrapper" style={{ rotate: scrollY }}>
       <motion.svg
         width="100%"
         height="100%"
@@ -22,14 +23,16 @@ function RotatingDisk({ Navigate }: Props) {
           </linearGradient>
         </defs>
         <motion.circle
-          cx="50vw"
-          r="40vw"
+          cx="35vw"
+          cy="50vh"
+          r="35vw"
           fill="url(#grad1)"
           style={{ rotate: scrollY }}
         />
       </motion.svg>
-    </div>
-  );
+    </motion.div>
+  </div>
+  ); 
 }
 
 export default RotatingDisk;

@@ -112,8 +112,17 @@ body {
 
 /*Navigation Page styles*/
 
-.disk-wrapper {
+.nav-wrapper {
     height: 200vh;
+    width: 100%;
+}
+
+.disk-wrapper {
+    position: sticky;
+    top: 0;
+    height: 70vw;
+    margin-left: 15vw;
+    width: 70vw;
 }
 
 .scroll-disk {
@@ -128,7 +137,6 @@ body {
     padding-top: 2%;
     padding-left: 100px;
     width: 40%;
-    height: 16vh;
     animation: slideRight 1s;
 }
 

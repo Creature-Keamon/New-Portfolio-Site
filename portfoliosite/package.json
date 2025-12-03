@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "motion": "^12.23.25",
+    "node": "^20.19.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
