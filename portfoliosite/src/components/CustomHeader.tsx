@@ -10,6 +10,10 @@ interface Props {
   buttonText?: string[];
 }
 
+const openLink = (url: string) => {
+  window.open(url, "_blank", "noopener,noreferrer");
+};
+
 function CustomHeader({
   text,
   subheader = "",

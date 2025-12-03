@@ -1,7 +1,11 @@
 import Page from "./components/Page";
 import ContentItem from "./components/ContentItem";
 
-function Project1() {
+interface Props {
+  Navigate: (item: string) => void;
+}
+
+function Decommission({ Navigate }: Props) {
   const arr = ["Itch.io"];
   const images = ["itchiologo"];
   const links = ["https://creaturekeamon.itch.io/decommission"];
@@ -17,6 +21,7 @@ function Project1() {
       buttonLinks={links}
       buttonText={arr}
       buttonImages={images}
+      Navigate={Navigate}
     >
       <ContentItem
         Content={
@@ -29,4 +34,4 @@ function Project1() {
   );
 }
 
-export default Project1;
+export default Decommission;
