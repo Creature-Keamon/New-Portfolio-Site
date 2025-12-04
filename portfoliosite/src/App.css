@@ -6,6 +6,8 @@ html * {
 
 body {
     background-color: rgb(29,32,33);
+    overflow-y: scroll;
+    overflow-x:hidden;
 }
 
 
@@ -115,12 +117,18 @@ body {
 .nav-wrapper {
     height: 200vh;
     width: 100%;
+    scrollbar-width: none;
+    background-color: wheat;
+}
+
+.nav-wrapper::-webkit-scrollbar {
+    width: 0px;
+    
 }
 
 .disk-wrapper {
     position: sticky;
     top: 0;
-    overflow: hidden;
     margin-left: 15vw;
     width: 70vw;
 }
@@ -128,7 +136,7 @@ body {
 .scroll-svg {
     display: block;
     position: absolute;
-    top: -35vw;
+    top: -20vw;
     margin: auto;
     
 }

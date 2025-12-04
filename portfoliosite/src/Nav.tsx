@@ -1,4 +1,5 @@
 import { motion, useScroll, useSpring } from "motion/react";
+import PlayerDisk from "./components/playerdisk";
 
 interface Props {
   Navigate: (item: string) => void;
@@ -9,10 +10,11 @@ function RotatingDisk({ Navigate }: Props) {
   const turn = useSpring(scrollY, {
     stiffness: 20,
   });
+  let diskRad = window.innerWidth;
 
   return (
     <div className="nav-wrapper">
-      <motion.div className="disk-wrapper" style={{ height: turn }}>
+      <motion.div className="disk-wrapper">
         <motion.svg
           height="70vw"
           width="70vw"
@@ -26,34 +28,7 @@ function RotatingDisk({ Navigate }: Props) {
               <stop offset="100%" stop-color="red" />
             </linearGradient>
           </defs>
-          <circle
-            className="scroll-circle"
-            cx="35vw"
-            cy="35vw"
-            r="35vw"
-            fill="url(#grad1)"
-          />
-          <circle
-            r="15vw"
-            cx="35vw"
-            cy="52vw"
-            fill="yellow"
-            className="minor-circle"
-          />
-          <circle
-            r="15vw"
-            cx="35vw"
-            cy="52vw"
-            fill="yellow"
-            className="minor-circle"
-          />
-          <circle
-            r="15vw"
-            cx="35vw"
-            cy="52vw"
-            fill="yellow"
-            className="minor-circle"
-          />
+          <PlayerDisk />
         </motion.svg>
       </motion.div>
     </div>
