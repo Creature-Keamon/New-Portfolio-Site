@@ -115,39 +115,34 @@ body {
 /*Navigation Page styles*/
 
 .nav-wrapper {
-    height: 200vh;
+    height: 100vh;
     width: 100%;
     scrollbar-width: none;
     background-color: wheat;
 }
 
 .nav-wrapper::-webkit-scrollbar {
-    width: 0px;
-    
+    width: 0px; 
 }
 
 .disk-wrapper {
-    position: sticky;
-    top: 0;
     margin-left: 15vw;
     width: 70vw;
+    height: fit-content;
 }
 
 .scroll-svg {
     display: block;
     position: absolute;
-    top: -20vw;
+    top: -24vw;
     margin: auto;
-    
+    animation: slideTop 3s ease-out;
 }
 
-.scroll-circle {
-    display: block;
-    margin: auto;
-}
-
-.minor-circle {
-    cursor: pointer;
+.player-bar{
+    position: absolute;
+    z-index: 1;
+    margin-top: -2.5%;
 }
 
 /*Filter styles*/
@@ -240,12 +235,8 @@ body {
 /*Clickable animations*/
 .clickable:hover {
     cursor: pointer; 
-    animation: hoverClickable 0.2s forwards;
 }
 
-.clickable:not(:hover) {
-    animation: unhoverClickable 0.2s forwards;
-}
 
 @keyframes slideTop {
     0% {transform: translateY(-1000px);}

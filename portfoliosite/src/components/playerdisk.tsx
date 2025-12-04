@@ -1,6 +1,6 @@
 interface Props {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }
 
 function PlayerDisk({ width, height }: Props) {
@@ -13,12 +13,12 @@ function PlayerDisk({ width, height }: Props) {
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <linearGradient id="a">
+        <linearGradient id="j">
           <stop offset={0} stopColor="#1a1a1a" stopOpacity={1} />
           <stop offset={1} stopColor="#626262" stopOpacity={0} />
         </linearGradient>
         <filter
-          id="b"
+          id="k"
           x={-0.030598301}
           y={-0.030598341}
           width={1.0611966}
@@ -55,7 +55,7 @@ function PlayerDisk({ width, height }: Props) {
           />
         </filter>
         <filter
-          id="d"
+          id="l"
           x={-0.030598301}
           y={-0.030598341}
           width={1.0611966}
@@ -74,8 +74,8 @@ function PlayerDisk({ width, height }: Props) {
           />
         </filter>
         <radialGradient
-          xlinkHref="#a"
-          id="c"
+          xlinkHref="#j"
+          id="m"
           cx={395.65723}
           cy={247.73973}
           fx={395.65723}
@@ -85,7 +85,7 @@ function PlayerDisk({ width, height }: Props) {
           gradientUnits="userSpaceOnUse"
         />
         <filter
-          id="e"
+          id="n"
           x={-0.33404867}
           y={-0.33404867}
           width={1.6680973}
@@ -122,13 +122,13 @@ function PlayerDisk({ width, height }: Props) {
           <path
             d="M254-138.026A196.09 196.09 0 0057.91 58.063 196.09 196.09 0 00254 254.152a196.09 196.09 0 00196.09-196.09A196.09 196.09 0 00254-138.025z"
             fill="#1a1a1a"
-            filter="url(#b)"
+            filter="url(#k)"
           />
           <path
             d="M254-138.026A196.09 196.09 0 0057.91 58.063 196.09 196.09 0 00254 254.152a196.09 196.09 0 00196.09-196.09A196.09 196.09 0 00254-138.025z"
-            fill="url(#c)"
+            fill="url(#m)"
             stroke="none"
-            filter="url(#d)"
+            filter="url(#l)"
           />
         </g>
         <circle
@@ -137,7 +137,7 @@ function PlayerDisk({ width, height }: Props) {
           r={17.961454}
           fill="#1e1e1e"
           strokeWidth={10}
-          filter="url(#e)"
+          filter="url(#n)"
         />
       </g>
     </svg>
