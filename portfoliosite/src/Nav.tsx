@@ -2,6 +2,9 @@ import { motion, useMotionValue, useSpring } from "motion/react";
 import PlayerDisk from "./components/PlayerDisk";
 import { useRef } from "react";
 import PlayerBar from "./components/PlayerBar";
+import ProjectDisk from "./components/ProjectDisk";
+import ContactDisk from "./components/ContactDisk";
+import AboutDisk from "./components/AboutDisk";
 
 interface Props {
   Navigate: (item: string) => void;
@@ -27,8 +30,14 @@ function RotatingDisk({ Navigate }: Props) {
             rotation.set(-(lastRotation.current + pointInfo.offset.x * 0.3));
           }}
           style={{ rotate: turn }}
+          onPanStart={(e, pointinfo) => {
+            rotation.set(-0);
+          }}
         >
           <PlayerDisk />
+          <AboutDisk />
+          <ContactDisk />
+          <ProjectDisk />
         </motion.svg>
       </motion.div>
     </div>

@@ -117,7 +117,7 @@ body {
 .nav-wrapper {
     height: 100vh;
     width: 100%;
-    scrollbar-width: none;
+    overflow: hidden;
     background-color: wheat;
 }
 
@@ -141,10 +141,30 @@ body {
 
 .player-bar{
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     margin-top: -2.5%;
 }
+.contact-disk {
+    transform: translateX(60%);
+    rotate: 120deg;
+}
 
+.project-disk {
+    transform: translateX(60%);
+}
+
+.about-disk {
+    rotate: -120deg;
+    transform: translateX(60%);
+}
+
+.cd {
+    transform-origin: 50% 50%;
+    scale:45%;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+}
 /*Filter styles*/
 
 .filter-wrapper {
