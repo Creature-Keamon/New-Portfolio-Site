@@ -1,6 +1,6 @@
 import { motion, transform, useMotionValue, useSpring } from "motion/react";
 import PlayerDisk from "./components/PlayerDisk";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import PlayerBar from "./components/PlayerBar";
 import Disk from "./components/Disk";
 import { animate } from "motion";
@@ -10,12 +10,12 @@ interface Props {
 }
 
 function RotatingDisk({ Navigate }: Props) {
-  let triggerAnim = 0;
+  const [retract, setRetract] = useState(false);
   const openPage = (link: string) => {
-    triggerAnim = 1;
+    setRetract(true);
     setTimeout(() => {
       Navigate(link);
-    }, 2000);
+    }, 2500);
   };
 
   const rotation = useMotionValue(0);
@@ -40,7 +40,12 @@ function RotatingDisk({ Navigate }: Props) {
           onPanStart={(e, pointinfo) => {
             rotation.set(-0);
           }}
-          {...(triggerAnim === 1 ? { animate: { y: 1000 } } : {})}
+          {...(retract === true
+            ? {
+                animate: { y: -700 },
+                transition: { ease: "linear", duration: 2 },
+              }
+            : {})}
         >
           <PlayerDisk />
           <Disk type="about" onClick={() => openPage("About")} />
