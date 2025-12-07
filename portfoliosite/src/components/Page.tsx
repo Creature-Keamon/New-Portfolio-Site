@@ -40,7 +40,12 @@ function Page({
   return (
     <div className="Bg">
       <div className="grid-item">
-        <TopBar Navigate={Navigate} />
+        <TopBar
+          Navigate={Navigate}
+          {...(buttonLinks != null ? { buttonLinks: buttonLinks } : {})}
+          buttonImages={buttonImages}
+          buttonText={buttonText}
+        />
         {filterItem != null ? (
           <FilterWrapper filterItem={filterItem}></FilterWrapper>
         ) : (
@@ -51,9 +56,6 @@ function Page({
       <div className="grid-item">
         <div className="header">
           <CustomHeader
-            {...(buttonLinks != null ? { buttonLinks: buttonLinks } : {})}
-            buttonImages={buttonImages}
-            buttonText={buttonText}
             text={title}
             subheader={subtitle}
             font={font}

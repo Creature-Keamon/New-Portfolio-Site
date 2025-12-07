@@ -11,7 +11,7 @@ const Projects = [
     Year: "2024",
     ImgName: "Ammit.png",
     Tags: ["Game Design", "3D Art", "Programming"],
-    PageURL: "Project1",
+    PageURL: "Ammit",
   },
   {
     Name: "Linus Tech Tips",

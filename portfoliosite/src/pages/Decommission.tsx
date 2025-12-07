@@ -1,5 +1,5 @@
-import Page from "./components/Page";
-import ContentItem from "./components/ContentItem";
+import Page from "../components/Page";
+import ContentItem from "../components/ContentItem";
 
 interface Props {
   Navigate: (item: string) => void;

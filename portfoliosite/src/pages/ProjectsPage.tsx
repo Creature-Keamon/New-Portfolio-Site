@@ -1,7 +1,7 @@
-import Page from "./components/Page";
-import ContentItem from "./components/ContentItem";
+import Page from "../components/Page";
+import ContentItem from "../components/ContentItem";
 import { useState } from "react";
-import Projects from "./assets/ProjectList";
+import Projects from "../assets/ProjectList";
 
 interface Props {
   Navigate: (item: string) => void;

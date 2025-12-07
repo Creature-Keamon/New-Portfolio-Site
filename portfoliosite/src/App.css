@@ -48,7 +48,7 @@ body {
 }
 
 .custom-header {
-    white-space: nowrap;
+    word-break: break-all;
     font-size: 600%;
     font-weight: 900;
     writing-mode:sideways-rl;
@@ -59,38 +59,11 @@ body {
 }
 
 .sub-header {
-    white-space: nowrap;
     font-size: 4vw;
     font-weight: 900;
     writing-mode: sideways-rl;
     margin-top: 12px;  
     width: 50%;
-}
-
-.external-buttons {
-    width: 80%;
-    padding-right: 12%;
-    float:right;
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.button-grid-wrapper {
-    display: grid;
-    height: 5%;
-    grid-template-columns: 30% 70%;
-    column-gap: 5%;
-    place-items: center;
-}
-
-.button-image {
-    width: 100%;
-}
-
-.button-text {
-    font-size: 1vw;
 }
 
 /*TopBar styles*/
@@ -110,6 +83,31 @@ body {
 .return-button-wrapper {
     padding-left: 100px;
     padding-top: 21px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 10px;
+}
+
+.external-buttons {
+    width: 30%;
+    display: grid;
+}
+
+
+.button-grid-wrapper {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 5%;
+    place-items: center;
+}
+
+.button-image {
+    width: 100%;
+}
+
+.button-text {
+    font-size: 1vw;
 }
 
 /*Navigation Page styles*/
