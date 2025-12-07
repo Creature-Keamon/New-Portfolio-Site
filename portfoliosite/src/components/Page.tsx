@@ -15,6 +15,7 @@ interface Props {
   buttonImages?: string[];
   filterItem?: (filter: string) => void;
   Navigate: (link: string) => void;
+  pageName?: string;
 }
 
 /*creates a page within some formatting rules and populates it with 
@@ -31,6 +32,7 @@ function Page({
   buttonImages,
   filterItem,
   Navigate,
+  pageName = "",
 }: Props) {
   if (backgroundColor != null) {
     document.body.style.backgroundColor = backgroundColor;
@@ -45,6 +47,7 @@ function Page({
           {...(buttonLinks != null ? { buttonLinks: buttonLinks } : {})}
           buttonImages={buttonImages}
           buttonText={buttonText}
+          pageName={pageName}
         />
         {filterItem != null ? (
           <FilterWrapper filterItem={filterItem}></FilterWrapper>

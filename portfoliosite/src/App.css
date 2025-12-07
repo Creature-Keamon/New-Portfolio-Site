@@ -75,10 +75,7 @@ body {
     z-index: 1;
 }
 
-.top-bar-wrapper {
-    position: sticky;
-    top: 0;
-}
+
 
 .return-button-wrapper {
     padding-left: 100px;

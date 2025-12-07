@@ -5,6 +5,7 @@ interface Props {
   buttonLinks?: string[];
   buttonImages?: string[];
   buttonText?: string[];
+  pageName?: string;
 }
 
 const openLink = (url: string) => {
@@ -16,6 +17,7 @@ function TopBar({
   buttonLinks = [],
   buttonText = [],
   buttonImages = [],
+  pageName = "",
 }: Props) {
   return (
     <div className="top-bar-wrapper">
@@ -23,11 +25,13 @@ function TopBar({
         <div className="internal-button">
           <Button onClick={() => Navigate("Home")}>Open</Button>
         </div>
-        <div className="internal-button">
-          <Button onClick={() => Navigate("Projects")}>
-            Return to Projects
-          </Button>
-        </div>
+        {pageName != "Projects" && (
+          <div className="internal-button">
+            <Button onClick={() => Navigate("Projects")}>
+              Return to Projects
+            </Button>
+          </div>
+        )}
 
         {buttonLinks.map((link: string, i: number) => (
           <div className="external-button">

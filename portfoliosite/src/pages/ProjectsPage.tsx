@@ -30,6 +30,7 @@ function ProjectsPage({ Navigate }: Props) {
       backgroundColor="rgb(29,32,33)"
       filterItem={filterItem}
       Navigate={Navigate}
+      pageName="Projects"
     >
       <div className="content-grid">
         {content.map((Project, index) => {
