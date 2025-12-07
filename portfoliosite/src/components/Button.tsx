@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactNode;
   colour?: "primary" | "secondary" | "danger" | "success";
   onClick: () => void;
-  imageFile: string;
+  imageFile?: string;
 }
 
 function Button({

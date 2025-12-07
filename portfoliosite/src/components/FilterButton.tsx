@@ -1,16 +1,16 @@
 interface Props {
   children: string;
-  Clickable: boolean;
+
   onClick: () => void;
 }
 
-function FilterButton({ children, onClick, Clickable }: Props) {
+function FilterButton({ children, onClick }: Props) {
   return (
     <button
       type="button"
       className={"btn btn-secondary"}
       //style="--btn-border-width: .25rm;"
-      {...(Clickable && { onClick: onClick })}
+      {...(onClick != null && { onClick: onClick })}
     >
       {children}
     </button>

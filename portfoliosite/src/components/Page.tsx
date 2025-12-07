@@ -6,15 +6,14 @@ import type React from "react";
 interface Props {
   children: React.ReactNode;
   title: string;
-  filter: boolean;
-  subtitle: string;
-  font: string;
-  textColor: string;
-  backgroundColor: string;
-  buttonLinks: string[];
-  buttonText: string[];
-  buttonImages: string[];
-  filterItem: (filter: string) => void;
+  subtitle?: string;
+  font?: string;
+  textColor?: string;
+  backgroundColor?: string;
+  buttonLinks?: string[];
+  buttonText?: string[];
+  buttonImages?: string[];
+  filterItem?: (filter: string) => void;
   Navigate: (link: string) => void;
 }
 
@@ -23,7 +22,6 @@ it's given props*/
 function Page({
   children,
   title,
-  filter = false,
   subtitle = "",
   font,
   textColor,
@@ -34,11 +32,16 @@ function Page({
   filterItem,
   Navigate,
 }: Props) {
+  if (backgroundColor != null) {
+    document.body.style.backgroundColor = backgroundColor;
+  }
+
+  document.body.style.overflowY = "scroll";
   return (
-    <div className="Bg" style={{ backgroundColor: backgroundColor }}>
+    <div className="Bg">
       <div className="grid-item">
         <TopBar Navigate={Navigate} />
-        {filter === true ? (
+        {filterItem != null ? (
           <FilterWrapper filterItem={filterItem}></FilterWrapper>
         ) : (
           <div className="filter-wrapper"></div>
@@ -48,7 +51,7 @@ function Page({
       <div className="grid-item">
         <div className="header">
           <CustomHeader
-            buttonLinks={buttonLinks}
+            {...(buttonLinks != null ? { buttonLinks: buttonLinks } : {})}
             buttonImages={buttonImages}
             buttonText={buttonText}
             text={title}

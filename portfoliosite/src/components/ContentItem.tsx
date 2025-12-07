@@ -4,18 +4,18 @@ import { motion } from "motion/react";
 interface Props {
   ImgName: string;
   FlavName?: string;
-  PageURL: string;
-  Name: string;
+  PageURL?: string;
+  Name?: string;
   Content: string;
   Tags?: string[];
   Right?: boolean;
-  Navigate: (item: string) => void;
+  Navigate?: (item: string) => void;
 }
 
 function ContentItem({
   ImgName,
-  PageURL = "",
-  Name = "",
+  PageURL,
+  Name,
   Content,
   Tags = [],
   Right = false,
@@ -26,9 +26,9 @@ function ContentItem({
       className={
         "content-wrapper " +
         (Right === true ? "content-wrapper-right" : "content-wrapper-left") +
-        (PageURL.length === 0 ? " project-page-item" : "")
+        (PageURL === null ? " project-page-item" : "")
       }
-      {...(PageURL.length > 0
+      {...(PageURL != null && Navigate != null
         ? {
             onClick: () => Navigate(PageURL),
             whileHover: { scale: 1.03 },
@@ -39,9 +39,7 @@ function ContentItem({
       <div
         className={
           "main-content " +
-          (Right === true
-            ? "main-content-right content-grid-right"
-            : "main-content-left content-grid-left")
+          (Right === true ? " content-grid-right" : " content-grid-left")
         }
       >
         <div
@@ -52,14 +50,14 @@ function ContentItem({
           <div className="content-image-wrapper">
             <img
               className={
-                "content-image " + (PageURL.length > 0 ? "clickable " : "")
+                "content-image " + (PageURL != null ? "clickable " : "")
               }
               src={"src/assets/" + ImgName}
             />
           </div>
           <div className="tag-wrapper">
-            {Tags.map((item) => (
-              <FilterButton onClick={() => {}} Clickable={false}>
+            {Tags.map((item, index) => (
+              <FilterButton onClick={() => {}} Clickable={false} key={index}>
                 {item}
               </FilterButton>
             ))}

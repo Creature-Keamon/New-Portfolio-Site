@@ -12,13 +12,15 @@ function RotatingDisk({ Navigate }: Props) {
   document.body.style.backgroundColor = "rgba(87, 87, 87, 1)";
   document.body.style.overflow = "hidden";
   const [retract, setRetract] = useState(false);
+  const [loadpage, setLoadPage] = useState(false);
   const [extend, setExtend] = useState(false);
 
   const openPage = (link: string) => {
     setRetract(true);
+    setLoadPage(true);
     setTimeout(() => {
       Navigate(link);
-    }, 2500);
+    }, 2000);
   };
 
   const jokeDiskAction = () => {
@@ -39,7 +41,15 @@ function RotatingDisk({ Navigate }: Props) {
   });
 
   return (
-    <div className="nav-wrapper">
+    <motion.div
+      className="nav-wrapper"
+      {...(loadpage === true && retract === true
+        ? {
+            animate: { opacity: 0 },
+            transition: { ease: "linear", duration: 2 },
+          }
+        : {})}
+    >
       <PlayerBar />
       <motion.div className="disk-wrapper">
         <motion.svg
@@ -74,7 +84,7 @@ function RotatingDisk({ Navigate }: Props) {
           <Disk type="joke" onClick={() => jokeDiskAction()} />
         </motion.svg>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 

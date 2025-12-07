@@ -13,11 +13,10 @@ function Decommission({ Navigate }: Props) {
   return (
     <Page
       title="DECOMMISSION"
-      filter={false}
       subtitle="2025"
       font=""
       textColor="rgba(255, 255, 255, 1)"
-      backgroundColor="rgba(36, 110, 18, 0.53)"
+      backgroundColor="rgba(36, 110, 18, 1)"
       buttonLinks={links}
       buttonText={arr}
       buttonImages={images}

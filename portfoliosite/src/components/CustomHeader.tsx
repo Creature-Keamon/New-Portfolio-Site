@@ -5,7 +5,7 @@ interface Props {
   subheader?: string;
   font?: string;
   textColor?: string;
-  buttonLinks: string[];
+  buttonLinks?: string[];
   buttonImages?: string[];
   buttonText?: string[];
 }
@@ -19,7 +19,7 @@ function CustomHeader({
   subheader = "",
   font,
   textColor,
-  buttonLinks = [],
+  buttonLinks,
   buttonText = [],
   buttonImages = [],
 }: Props) {
@@ -40,7 +40,7 @@ function CustomHeader({
         </h1>
       </div>
 
-      {buttonLinks?.length > 0 && (
+      {buttonLinks != null && (
         <div className="external-buttons">
           {buttonLinks.map((link: string, i: number) => (
             <Button
