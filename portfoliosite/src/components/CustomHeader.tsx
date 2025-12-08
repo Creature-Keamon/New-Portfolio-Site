@@ -3,9 +3,16 @@ interface Props {
   subheader?: string;
   font?: string;
   textColor?: string;
+  tags?: string[];
 }
 
-function CustomHeader({ text, subheader = "", font, textColor }: Props) {
+function CustomHeader({
+  text,
+  subheader = "",
+  font,
+  textColor,
+  tags = [],
+}: Props) {
   return (
     <div className="header-wrapper">
       <div className="header-grid">

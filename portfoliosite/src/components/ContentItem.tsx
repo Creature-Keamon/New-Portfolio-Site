@@ -6,7 +6,7 @@ interface Props {
   FlavName?: string;
   PageURL?: string;
   Name?: string;
-  Content: string;
+  Content: React.ReactNode;
   Tags?: string[];
   Right?: boolean;
   Navigate?: (item: string) => void;
@@ -57,7 +57,7 @@ function ContentItem({
           </div>
           <div className="tag-wrapper">
             {Tags.map((item, index) => (
-              <FilterButton onClick={() => {}} Clickable={false} key={index}>
+              <FilterButton onClick={() => {}} key={index}>
                 {item}
               </FilterButton>
             ))}

@@ -24,10 +24,48 @@ function Ammit({ Navigate }: Props) {
     >
       <ContentItem
         Content={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et auctor turpis. Nulla viverra lacus in magna commodo lobortis. Sed cursus purus massa, ut aliquet mi varius in. Donec vitae sollicitudin lectus, vel tristique nulla. Vivamus nunc quam, faucibus finibus congue eget, condimentum a orci. Maecenas tristique vel ante quis commodo." +
-          " Integer sed erat sem. Ut mi neque, pulvinar eu vulputate in, ornare ac sem."
+          <div>
+            {" "}
+            <p>
+              Ammit the Truth is a deduction visual novel style video game,
+              using art styles influenced by games like 'Hades', and gameplay
+              reminiscent of games like 'Papers Please'. It sees the player take
+              the role of Anubis, the guardian of the egyptian afterlife, and he
+              must interview and interrogate each soul who seeks to enter the
+              afterlife. However, some souls may lie, decieve, withhold
+              information or just attempt to barge past. All of these souls are
+              unworthy, and Anubis must correctly tell determine the worthiness
+              each soul, by correctly identifying inconsistencies in speech,
+              whether information is being withheld, or if the soul is just
+              straight up telling you why they are worthy or not. It was created
+              as part of a group project for a University Assignment, which I
+              completed with a small group of friends.
+            </p>
+            <p>
+              Our team had some incredible talent, especially in the art
+              department, and I am of the belief that our game is visually
+              stunning. My contribution was all over the place. I did 3D art,
+              programming and game design, but my greatest contributions were
+              with project management, writing of dialogue and planning.
+              Creating this game was truly a very enjoyable experience, but it
+              was not without it's hiccups. Two of our team members had
+              frustratingly poor communication and time management skills, and
+              it was often the job of myself and our 2D artist to try and get
+              them back on track, with great difficulty. Due to this, much of
+              the game was finished the day before it was due to be handed in,
+              placing us under a lot of stress.
+            </p>
+            <p>
+              Despite these hiccups, the resulting game was rather enjoyable to
+              play through, with some beautiful art to look at while doing so. I
+              learnt some valuable lessons about how to manage unmotivated
+              teammates and do project management. I am more experienced now
+              with creating 3D models with optimised topology and in game design
+              philosophy and principles.
+            </p>
+          </div>
         }
-        ImgName="Decommission.png"
+        ImgName="Ammit.png"
       />
     </Page>
   );

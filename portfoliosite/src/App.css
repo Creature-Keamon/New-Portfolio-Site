@@ -49,7 +49,7 @@ body {
 
 .custom-header {
     word-break: break-all;
-    font-size: 600%;
+    font-size: 4.5vw;
     font-weight: 900;
     writing-mode:sideways-rl;
     height: 100%;
@@ -59,7 +59,7 @@ body {
 }
 
 .sub-header {
-    font-size: 4vw;
+    font-size: 3.5vw;
     font-weight: 900;
     writing-mode: sideways-rl;
     margin-top: 12px;  
@@ -74,8 +74,6 @@ body {
     filter: blur(10px);
     z-index: 1;
 }
-
-
 
 .return-button-wrapper {
     padding-left: 100px;
