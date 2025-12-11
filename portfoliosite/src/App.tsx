@@ -1,11 +1,12 @@
-import decommissionData from "./assets/data/decommissionData";
+import decommissionData from "./data/decommissionData";
 import "./App.css";
 import { useState } from "react";
 import ProjectsPage from "./pages/ProjectsPage";
 import RotatingDisk from "./pages/Nav";
-import ammitData from "./assets/data/ammitData";
+import ammitData from "./data/ammitData";
 import SingleProject from "./pages/SingleProject";
-import reminisceData from "./assets/data/reminisceData";
+import reminisceData from "./data/reminisceData";
+import PortfolioData from "./data/portfolioData";
 
 function App() {
   const [page, SetPage] = useState("Home");
@@ -23,6 +24,9 @@ function App() {
       )}
       {page === "Decommission" && (
         <SingleProject Navigate={navigate} data={decommissionData} />
+      )}
+      {page === "Portfolio" && (
+        <SingleProject Navigate={navigate} data={PortfolioData} />
       )}
     </div>
   );

@@ -257,9 +257,17 @@ body {
     margin-top: 5px;
 }
 
-.description-text {
+.description-text-left {
     font-size: 1.15vw;
     width: 80%;
+}
+
+.description-text-right {
+    font-size: 1.15vw;
+    width: 80%;
+    float: right;
+    text-align: right;
+    margin-right: 5.5%;
 }
 
 .year-text {

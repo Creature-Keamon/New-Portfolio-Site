@@ -1,6 +1,7 @@
 import githublogo from "../assets/githublogo.svg";
 import youtubelogo from "../assets/youtubelogo.svg";
 import itchiologo from "../assets/itchiologo.svg";
+import link from "../assets/link.svg";
 
 interface Props {
   children: React.ReactNode;
@@ -35,6 +36,9 @@ function Button({
             )}
             {imageFile === "itchiologo" && (
               <img className="button-image" src={itchiologo}></img>
+            )}
+            {imageFile === "link" && (
+              <img className="button-image" src={link}></img>
             )}
           </div>
           <div className="button-grid-item button-text">{children}</div>

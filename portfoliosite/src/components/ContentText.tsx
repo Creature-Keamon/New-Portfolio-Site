@@ -25,7 +25,10 @@ function ContentText({
       </h1>
       <p
         className={
-          "text" + (projectPage === true ? " year-text" : " description-text")
+          "text" +
+          (projectPage === true
+            ? " year-text"
+            : " description-text" + (right === true ? "-right" : "-left"))
         }
         style={{ fontFamily: font }}
       >
