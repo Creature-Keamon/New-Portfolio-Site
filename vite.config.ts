@@ -4,5 +4,5 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [svgr(),react()],
+  plugins: [svgr(),react({babel: {plugins: ['babel-plugin-react-compiler']}})],
 });
