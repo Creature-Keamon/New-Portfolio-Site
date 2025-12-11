@@ -34,6 +34,19 @@ function TopBar({
             </Button>
           </div>
         )}
+        {pageName === "Contact" && (
+          <div className="internal-button">
+            <Button
+              onClick={() =>
+                openLink("https://www.linkedin.com/in/shawn-neal-621028319/")
+              }
+              colour="secondary"
+              imageFile="linkedinlogo"
+            >
+              LinkedIn
+            </Button>
+          </div>
+        )}
 
         {buttonLinks.map((link: string, i: number) => (
           <div className="external-button">

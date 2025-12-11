@@ -7,6 +7,8 @@ import ammitData from "./data/ammitData";
 import SingleProject from "./pages/SingleProject";
 import reminisceData from "./data/reminisceData";
 import PortfolioData from "./data/portfolioData";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
   const [page, SetPage] = useState("Home");
@@ -16,6 +18,8 @@ function App() {
     <div>
       {page === "Projects" && <ProjectsPage Navigate={navigate} />}
       {page === "Home" && <RotatingDisk Navigate={navigate} />}
+      {page === "Contact" && <Contact Navigate={navigate} />}
+      {page === "About" && <About Navigate={navigate} />}
       {page === "Ammit" && (
         <SingleProject Navigate={navigate} data={ammitData} />
       )}
