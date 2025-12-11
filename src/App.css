@@ -282,6 +282,15 @@ body {
     right: 1;
 }
 
+/*About and Contact styles*/
+.other-text-wrapper {
+    padding-left:100px;
+    width: 100%;
+    font-size: 1.5vw;
+    text-align: center;
+    animation: scaleIn 1s;
+}
+
 /*Clickable animations*/
 .clickable:hover {
     cursor: pointer; 

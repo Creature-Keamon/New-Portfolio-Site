@@ -25,9 +25,9 @@ function TopBar({
     <div className="top-bar-wrapper">
       <div className="return-button-wrapper">
         <div className="internal-button">
-          <Button onClick={() => Navigate("Home")}>Open</Button>
+          <Button onClick={() => Navigate("Home")}>Home</Button>
         </div>
-        {pageName != "Projects" && (
+        {pageName! in ["Projects", "About", "Contact"] && (
           <div className="internal-button">
             <Button onClick={() => Navigate("Projects")}>
               Return to Projects

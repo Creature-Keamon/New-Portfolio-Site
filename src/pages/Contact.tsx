@@ -1,5 +1,6 @@
 import Page from "../components/Page";
-import ContentText from "../components/ContentText";
+
+import OtherText from "../components/Othertext";
 
 interface Props {
   Navigate: (item: string) => void;
@@ -14,9 +15,9 @@ function Contact({ Navigate }: Props) {
       pageName="Contact"
     >
       <div className="content-grid">
-        <ContentText
-          content={"Contact me with the LinkedIn link at the top of the page."}
-        ></ContentText>
+        <OtherText>
+          Contact me with the LinkedIn link at the top of the page.
+        </OtherText>
       </div>
     </Page>
   );
