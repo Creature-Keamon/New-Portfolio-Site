@@ -1,3 +1,7 @@
+import Ammit from "../assets/Ammit.png";
+import Ammit2 from "../assets/Ammit2.png";
+import Ammit3 from "../assets/Ammit3.jpeg";
+
 const ammitData = {
   buttonText: ["Itch.io"],
   buttonImages: ["itchiologo"],
@@ -9,7 +13,7 @@ const ammitData = {
   backgroundColor: "rgba(184, 146, 75, 1)",
   pageData: [
     {
-      imgName: "Ammit.png",
+      imgName: Ammit,
       pageData: (
         <p>
           Ammit the Truth is a deduction/detective based visual novel style
@@ -27,7 +31,7 @@ const ammitData = {
       ),
     },
     {
-      imgName: "Ammit2.png",
+      imgName: Ammit2,
       pageData: (
         <p>
           Our team had some incredible talent, especially in the art department,
@@ -42,7 +46,7 @@ const ammitData = {
       ),
     },
     {
-      imgName: "Ammit3.jpeg",
+      imgName: Ammit3,
       pageData: (
         <p>
           Despite these hiccups, the resulting game was rather enjoyable to play

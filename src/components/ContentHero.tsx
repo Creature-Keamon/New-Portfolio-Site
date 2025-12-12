@@ -49,7 +49,7 @@ function ContentHero({
               (pageURL != null ? " clickable" : "") +
               (header === false ? " flavour-image" : " main-image")
             }
-            src={"src/assets/" + imgName}
+            src={imgName}
           />
         </div>
         <div className="tag-wrapper">

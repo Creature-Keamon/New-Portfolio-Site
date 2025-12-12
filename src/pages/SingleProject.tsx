@@ -29,6 +29,7 @@ function SingleProject({ Navigate, data }: Props) {
       buttonText={data.buttonText}
       buttonImages={data.buttonImages}
       Navigate={Navigate}
+      pageName={data.title}
     >
       <div className="content-grid">
         {data.pageData.map((item, index) => {

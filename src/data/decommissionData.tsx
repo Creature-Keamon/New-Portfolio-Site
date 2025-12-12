@@ -1,3 +1,8 @@
+import Decommission from "../assets/Decommission.png";
+import Decommission2 from "../assets/Decommission2.png";
+import Decommission3 from "../assets/Decommission3.png";
+import Decommission1 from "../assets/Decommission1.png";
+
 const decommissionData = {
   buttonText: ["Itch.io"],
   buttonImages: ["itchiologo"],
@@ -9,7 +14,7 @@ const decommissionData = {
   backgroundColor: "#6b625cff",
   pageData: [
     {
-      imgName: "Decommission.png",
+      imgName: Decommission,
       pageData: (
         <p>
           Decommission is a small, proof of concept game where you, the player,
@@ -23,7 +28,7 @@ const decommissionData = {
       ),
     },
     {
-      imgName: "Decommission3.png",
+      imgName: Decommission3,
       pageData: (
         <p>
           From the ground up we wanted it to be a cozy, relaxing experience, so
@@ -35,7 +40,7 @@ const decommissionData = {
       ),
     },
     {
-      imgName: "Decommission2.png",
+      imgName: Decommission2,
       pageData: (
         <p>
           The player has access to multiple tools (and would be able to unlock
@@ -47,7 +52,7 @@ const decommissionData = {
       ),
     },
     {
-      imgName: "Decommission1.png",
+      imgName: Decommission1,
       pageData: (
         <p>
           To ensure that our tools do not contrast against our cozy design

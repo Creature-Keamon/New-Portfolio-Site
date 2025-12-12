@@ -1,3 +1,7 @@
+import Portfoliosite from "../assets/Portfoliosite.png";
+import PortfoliositeOld from "../assets/PortfolioSiteOld.png";
+import PortfoliositeNew from "../assets/PortfolioSiteNew.png";
+
 const PortfolioData = {
   buttonText: ["Old Site", "Github"],
   buttonImages: ["link", "githublogo"],
@@ -12,7 +16,7 @@ const PortfolioData = {
   backgroundColor: "",
   pageData: [
     {
-      imgName: "Portfoliosite.png",
+      imgName: Portfoliosite,
       pageData: (
         <p>
           This site was built at the end of 2025 with REACT.JS and Motion.JS.
@@ -22,7 +26,7 @@ const PortfolioData = {
       ),
     },
     {
-      imgName: "PortfolioSiteOld.png",
+      imgName: PortfoliositeOld,
       pageData: (
         <p>
           The original site was designed to be a hub for all of the projects
@@ -34,7 +38,7 @@ const PortfolioData = {
       ),
     },
     {
-      imgName: "PortfolioSiteNew.png",
+      imgName: PortfoliositeNew,
       pageData: (
         <p>
           So I have remade it with React.JS and Motion.JS. As I am using React,

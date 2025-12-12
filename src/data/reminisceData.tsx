@@ -1,3 +1,8 @@
+import Reminisce from "../assets/Reminisce.png";
+import Reminisce2 from "../assets/Reminisce2.jpg";
+import Reminisce3 from "../assets/Reminisce3.jpg";
+import Reminisce4 from "../assets/Reminisce4.jpg";
+
 const reminisceData = {
   buttonText: ["Youtube"],
   buttonImages: ["youtubelogo"],
@@ -9,7 +14,7 @@ const reminisceData = {
   backgroundColor: "#c9ab6aff",
   pageData: [
     {
-      imgName: "Reminisce.png",
+      imgName: Reminisce,
       pageData: (
         <p>
           To Reminisce is a short film created for the New Zealand 2025 48 Hour
@@ -24,7 +29,7 @@ const reminisceData = {
       ),
     },
     {
-      imgName: "Reminisce4.jpg",
+      imgName: Reminisce4,
       pageData: (
         <p>
           The editing workstation used over the course of the 48 hour creation
@@ -38,7 +43,7 @@ const reminisceData = {
       ),
     },
     {
-      imgName: "Reminisce3.jpg",
+      imgName: Reminisce3,
       pageData: (
         <p>
           The film we made the previous year was plagued with problems. This
@@ -52,7 +57,7 @@ const reminisceData = {
       ),
     },
     {
-      imgName: "Reminisce2.jpg",
+      imgName: Reminisce2,
       pageData: (
         <p>
           Creating To Reminisce was an excellent lesson in filmmaking, writing,
